@@ -1,37 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-
+import styles from './App.module.css';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HomePage, RepositoryPage } from "./pages";
 
 function App() {
-  let [data, setData] = useState([]);
-  useEffect(() => {
-    axios.get('/api')
-      // .then((response) => response.json())
-      .then((response) => {
-        console.log(response)
-        setData(response.data.content)
-        console.log(data)
-      })
-  }, []);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div>
-          {data}
-        </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/repository/:username" component={RepositoryPage} />
+          <Route render={() => <h1>404 not found... </h1>} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
