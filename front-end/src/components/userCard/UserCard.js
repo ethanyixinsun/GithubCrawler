@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const UserCard = (props) => {
   return (
     <Link to={`repository/${props.user.username}`}>
-      <Card style={{ width: '18rem' }}>
+      <Card className={styles["user-card"]}>
         <Card.Img variant="top" src="https://avatars3.githubusercontent.com/u/37851086?v=4" />
         <Card.Body>
           <Card.Title>{props.user.username}</Card.Title>

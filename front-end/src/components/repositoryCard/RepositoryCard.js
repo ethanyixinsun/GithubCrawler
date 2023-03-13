@@ -5,7 +5,7 @@ import { StarFill } from 'react-bootstrap-icons';
 
 export const RepositoryCard = (props) => {
   return (
-    <Card style={{ width: '30rem' }}>
+    <Card className={styles["repository-card"]}>
       <Card.Body>
         <Card.Title>{props.repo.name}</Card.Title>
         <Row>

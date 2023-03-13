@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { UserCard } from "../../components"
+import { UserCardList } from "../../components"
 import axios from 'axios';
 
 export const HomePage = () => {
@@ -22,13 +22,7 @@ export const HomePage = () => {
   return (
     <div>
       <div>home page</div>
-      {
-        users.map((user, i) => {
-          return (
-            <UserCard user={user} />
-          );
-        })
-      }
+      <UserCardList users={users}/>
     </div>
   )
 }

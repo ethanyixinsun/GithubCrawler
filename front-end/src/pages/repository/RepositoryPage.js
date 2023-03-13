@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { RepositoryCard } from "../../components"
+import { RepositoryCardList } from "../../components"
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 
@@ -24,13 +24,7 @@ export const RepositoryPage = () => {
   return (
     <div>
       <div>repository page</div>
-      {
-        repos.map((repo, i) => {
-          return (
-            <RepositoryCard repo={repo} />
-          );
-        })
-      }
+      <RepositoryCardList repos={repos}/>
     </div>
   );
 }
