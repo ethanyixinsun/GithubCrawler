@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const RepositoryCard = (props) => {
   return (
-    <Link to={props.repo.link} style={{ textDecoration: 'none' }}>
+    <a href={props.repo.link} target="_blank" style={{ textDecoration: 'none' }} >
       <Card className={styles["repository-card"]}>
         <Card.Body>
           <Card.Title className={styles["card-title"]}>{props.repo.name}</Card.Title>
@@ -25,6 +25,6 @@ export const RepositoryCard = (props) => {
           <Card.Text className={styles["card-text"]}>{props.repo.description}</Card.Text>
         </Card.Body>
       </Card>
-    </Link>
+    </a>
   );
 };

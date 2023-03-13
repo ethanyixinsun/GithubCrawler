@@ -1,11 +1,14 @@
 from pymongo import MongoClient
 import requests
 from github import Github
+import os
+from dotenv import load_dotenv
 
 
-client = MongoClient(
-    "mongodb+srv://yixinsun:19990802@githubcrawler.jxo2wfn.mongodb.net/test"
-)
+load_dotenv()
+
+
+client = MongoClient(os.environ.get("MONGODB_URI"))
 db = client.get_default_database()
 db.user_info.create_index("username", unique=True)
 db.repository.create_index("name", unique=True)
@@ -14,8 +17,11 @@ db.repository.create_index("name", unique=True)
 def store_user_data(username):
     user_url = f"https://api.github.com/users/{username}"
     user_data = requests.get(user_url).json()
-    github_name = user_data["name"]
-    user_data_sliced = {"username": username, "name": github_name}
+    user_data_sliced = {
+        "username": username,
+        "name": user_data["name"],
+        "avatar": user_data["avatar_url"]
+    }
     db.user_info.insert_one(user_data_sliced)
 
     github = Github()
