@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { MainLayout } from '../../layouts';
 import { UserCardList } from "../../components"
+import styles from "./HomePage.module.css"
 import axios from 'axios';
 
 export const HomePage = () => {
@@ -20,10 +22,10 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <div>home page</div>
+    <MainLayout>
+      <h1 className={styles["h1"]}>Github Users</h1>
       <UserCardList users={users}/>
-    </div>
+    </MainLayout>
   )
 }
 

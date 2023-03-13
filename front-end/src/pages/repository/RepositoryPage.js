@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { MainLayout } from '../../layouts';
 import { RepositoryCardList } from "../../components"
+import styles from "./RepositoryPage.module.css"
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 
@@ -22,9 +24,9 @@ export const RepositoryPage = () => {
   }, []);
 
   return (
-    <div>
-      <div>repository page</div>
-      <RepositoryCardList repos={repos}/>
-    </div>
+    <MainLayout>
+      <h1 className={styles["h1"]}>Repository of {username}</h1>
+      <RepositoryCardList repos={repos} />
+    </MainLayout>
   );
 }
