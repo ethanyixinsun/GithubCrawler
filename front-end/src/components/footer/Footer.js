@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import styles from "./Footer.module.css"
 import { Linkedin, Github } from "react-bootstrap-icons"

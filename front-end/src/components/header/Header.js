@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Github } from "react-bootstrap-icons";
 import styles from "./Header.module.css";

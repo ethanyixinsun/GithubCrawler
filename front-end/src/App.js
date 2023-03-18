@@ -1,5 +1,4 @@
 import styles from './App.module.css';
-import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { HomePage, RepositoryPage } from "./pages";
 
