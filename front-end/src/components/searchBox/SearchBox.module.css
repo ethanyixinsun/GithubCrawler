@@ -1,0 +1,15 @@
+.search-group {
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.search-box {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 90%;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { MainLayout } from '../../layouts';
-import { UserCardList } from "../../components"
+import { UserCardList, SearchBox } from "../../components"
 import styles from "./HomePage.module.css"
 import axios from 'axios';
 
 export const HomePage = () => {
-  let [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [searchField, setSearchField] = useState('');
+  const [filteredUsers, setFilteredUsers] = useState(users);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,10 +23,27 @@ export const HomePage = () => {
     fetchData();
   }, []);
 
+  const onSearchChange = (event) => {
+    const searchFieldString = event.target.value.toLocaleLowerCase();
+    setSearchField(searchFieldString);
+  };
+
+  useEffect(() => {
+    const filteredList = users.filter((user) => {
+      return user.username.toLocaleLowerCase().includes(searchField);
+    });
+
+    setFilteredUsers(filteredList);
+  }, [users, searchField]);
+
   return (
     <MainLayout>
       <h1 className={styles["h1"]}>Github Users</h1>
-      <UserCardList users={users}/>
+      <SearchBox
+        placeholder='Search username'
+        onChangeHandler={onSearchChange}
+      />
+      <UserCardList users={filteredUsers} />
     </MainLayout>
   )
 }
