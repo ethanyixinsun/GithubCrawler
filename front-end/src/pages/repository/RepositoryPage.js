@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MainLayout } from '../../layouts';
 import { RepositoryCardList, SearchBox } from "../../components"
-import styles from "./RepositoryPage.module.css"
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 
@@ -23,7 +22,7 @@ export const RepositoryPage = () => {
     };
 
     fetchData();
-  }, []);
+  }, [username]);
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
@@ -40,7 +39,7 @@ export const RepositoryPage = () => {
 
   return (
     <MainLayout>
-      <h1 className={styles["h1"]}>Repository of {username}</h1>
+      <h1>Repository of {username}</h1>
       <SearchBox
         placeholder='Search repository name'
         onChangeHandler={onSearchChange}

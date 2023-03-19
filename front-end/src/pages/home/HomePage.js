@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MainLayout } from '../../layouts';
 import { UserCardList, SearchBox } from "../../components"
-import styles from "./HomePage.module.css"
 import axios from 'axios';
 
 export const HomePage = () => {
@@ -38,7 +37,7 @@ export const HomePage = () => {
 
   return (
     <MainLayout>
-      <h1 className={styles["h1"]}>Github Users</h1>
+      <h1>GitHub Users</h1>
       <SearchBox
         placeholder='Search username'
         onChangeHandler={onSearchChange}

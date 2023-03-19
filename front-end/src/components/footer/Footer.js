@@ -11,12 +11,12 @@ export const Footer = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav >
-              <Nav.Link style={{ color: 'black' }}>Author @Yixin Sun</Nav.Link>
+              <Nav.Link><span style={{ color: 'black' }}>Author @Yixin Sun</span></Nav.Link>
               <Nav.Link href="https://www.linkedin.com/in/yixinsun99/">
-                <Linkedin className={styles["icon"]} />LinkedIn
+                <Linkedin /><span>LinkedIn</span>
               </Nav.Link>
-              <Nav.Link href="https://www.linkedin.com/in/yixinsun99/">
-                <Github className={styles["icon"]} />Github
+              <Nav.Link href="https://github.com/ethanyixinsun/">
+                <Github /><span>GitHub</span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

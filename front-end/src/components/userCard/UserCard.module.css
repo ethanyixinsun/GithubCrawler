@@ -1,16 +1,14 @@
 .user-card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: 1px solid var(--primary) !important;
+  box-shadow: 5px 5px 5px 5px var(--secondary);
   padding: 1.5rem;
-  box-shadow: 5px 5px 5px 5px #9ec3c1;
 }
 
 .card-title {
-  color: black;
+  font-weight: bold !important;
+  margin-bottom: 1rem !important;
 }
 
 .card-subtitle {
-  color: gray;
+  color: var(--text);
 }

@@ -6,7 +6,7 @@ export const UserCardList = ({ users }) => {
   return (
     <div>
       {
-        users.length == 0 ?
+        users.length === 0 ?
           <p className={styles["text-info"]}>Sorry, no user found</p> :
           <div className={styles["card-list"]}>
             {

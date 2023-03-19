@@ -1,4 +1,4 @@
 .app {
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: var(--back);
   min-height: 100vh;
 }

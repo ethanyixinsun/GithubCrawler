@@ -6,7 +6,7 @@ export const RepositoryCardList = ({ repos }) => {
   return (
     <div>
       {
-        repos.length == 0 ?
+        repos.length === 0 ?
           <p className={styles["text-info"]}>Sorry, no repository found</p> :
           <div className={styles["card-list"]}>
             {
