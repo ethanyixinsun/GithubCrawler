@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MainLayout } from '../../layouts';
-import { RepositoryCardList, SearchBox } from "../../components"
+import { RepositoryCardList, SearchBox } from "../../components";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 
@@ -14,7 +14,7 @@ export const RepositoryPage = () => {
     const fetchData = async () => {
       try {
         const { data: response } = await axios.get(`/repos/user/${username}`);
-        const responseJSON = JSON.parse(response)
+        const responseJSON = JSON.parse(response);
         setRepos(responseJSON);
       } catch (error) {
         console.error(error)
@@ -47,4 +47,4 @@ export const RepositoryPage = () => {
       <RepositoryCardList repos={filteredRepos} pageLimit={8} />
     </MainLayout>
   );
-}
+};

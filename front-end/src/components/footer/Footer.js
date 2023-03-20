@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import styles from "./Footer.module.css"
-import { Linkedin, Github } from "react-bootstrap-icons"
+import { Linkedin, Github } from "react-bootstrap-icons";
 
 export const Footer = () => {
   return (
@@ -25,4 +25,4 @@ export const Footer = () => {
     </div>
 
   );
-}
+};

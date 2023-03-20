@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MainLayout } from '../../layouts';
-import { UserCardList, SearchBox } from "../../components"
+import { UserCardList, SearchBox } from "../../components";
 import axios from 'axios';
 
 export const HomePage = () => {
@@ -45,6 +45,6 @@ export const HomePage = () => {
       <UserCardList users={filteredUsers} pageLimit={10} />
     </MainLayout>
   )
-}
+};
 
 

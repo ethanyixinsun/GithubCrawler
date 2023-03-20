@@ -9,4 +9,4 @@ export const MainLayout = ({ children }) => {
       <Footer />
     </div>
   );
-}
+};
