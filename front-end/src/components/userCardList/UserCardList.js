@@ -14,6 +14,7 @@ export const UserCardList = ({ users, pageLimit }) => {
     }
 
     setPagedUsers(pagedList);
+    setPage(1);
   }, [users, pageLimit]);
 
   return (

@@ -14,6 +14,7 @@ export const RepositoryCardList = ({ repos, pageLimit }) => {
     }
 
     setPagedRepos(pagedList);
+    setPage(1);
   }, [repos, pageLimit]);
 
   return (
