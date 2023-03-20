@@ -1,5 +1,5 @@
-import styles from "./SearchBox.module.css";
-import { Search } from "react-bootstrap-icons";
+import styles from './SearchBox.module.css';
+import { Search } from 'react-bootstrap-icons';
 
 
 export const SearchBox = ({ className, placeholder, onChangeHandler }) => {

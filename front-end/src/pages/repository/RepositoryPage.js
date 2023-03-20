@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { MainLayout } from '../../layouts';
-import { RepositoryCardList, SearchBox } from "../../components";
+import { RepositoryCardList, SearchBox } from '../../components';
 import axios from 'axios';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
+import styles from './RepositoryPage.module.css';
 
 export const RepositoryPage = () => {
   const { username } = useParams();
   let [repos, setRepos] = useState([]);
   const [searchField, setSearchField] = useState('');
   const [filteredRepos, setFilteredRepos] = useState(repos);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const { data: response } = await axios.get(`/repos/user/${username}`);
         const responseJSON = JSON.parse(response);
@@ -19,6 +23,7 @@ export const RepositoryPage = () => {
       } catch (error) {
         console.error(error)
       }
+      setLoading(false);
     };
 
     fetchData();
@@ -44,7 +49,8 @@ export const RepositoryPage = () => {
         placeholder='Search repository name'
         onChangeHandler={onSearchChange}
       />
-      <RepositoryCardList repos={filteredRepos} pageLimit={8} />
+      {loading && <Spinner className={styles["loading-spinner"]} animation="border" />}
+      {!loading && <RepositoryCardList repos={filteredRepos} pageLimit={8} />}
     </MainLayout>
   );
 };

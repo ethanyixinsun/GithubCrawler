@@ -1,6 +1,6 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { Github } from "react-bootstrap-icons";
-import styles from "./Header.module.css";
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Github } from 'react-bootstrap-icons';
+import styles from './Header.module.css';
 
 export const Header = () => {
   return (

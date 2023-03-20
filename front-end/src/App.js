@@ -1,6 +1,6 @@
 import styles from './App.module.css';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { HomePage, RepositoryPage } from "./pages";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HomePage, RepositoryPage } from './pages';
 
 function App() {
   return (

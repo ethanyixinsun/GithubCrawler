@@ -43,3 +43,8 @@ a {
 .pagination {
   margin-bottom: 2rem;
 }
+
+.pagination .active>.page-link {
+  background-color: var(--peach) !important;
+  border-color: var(--peach) !important;
+}

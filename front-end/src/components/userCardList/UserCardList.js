@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { UserCard } from "../../components";
-import styles from "./UserCardList.module.css";
+import { UserCard } from '../../components';
+import styles from './UserCardList.module.css';
 import { PaginationControl } from 'react-bootstrap-pagination-control';
 
 export const UserCardList = ({ users, pageLimit }) => {

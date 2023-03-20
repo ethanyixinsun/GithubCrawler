@@ -1,5 +1,5 @@
-import { Row, Col, Card } from "react-bootstrap";
-import styles from "./RepositoryCard.module.css";
+import { Row, Col, Card } from 'react-bootstrap';
+import styles from './RepositoryCard.module.css';
 import { StarFill, CodeSlash } from 'react-bootstrap-icons';
 
 export const RepositoryCard = ({ repo }) => {

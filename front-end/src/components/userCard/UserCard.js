@@ -1,6 +1,6 @@
-import { Card } from "react-bootstrap";
-import styles from "./UserCard.module.css";
-import { Link } from "react-router-dom";
+import { Card } from 'react-bootstrap';
+import styles from './UserCard.module.css';
+import { Link } from 'react-router-dom';
 
 export const UserCard = ({ user }) => {
   return (

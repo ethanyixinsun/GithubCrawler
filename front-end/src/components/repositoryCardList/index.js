@@ -1,1 +1,1 @@
-export * from "./RepositoryCardList"
+export * from './RepositoryCardList'

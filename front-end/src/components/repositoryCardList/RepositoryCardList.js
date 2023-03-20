@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { RepositoryCard } from "../../components";
-import styles from "./RepositoryCardList.module.css";
+import { RepositoryCard } from '../../components';
+import styles from './RepositoryCardList.module.css';
 import { PaginationControl } from 'react-bootstrap-pagination-control';
 
 export const RepositoryCardList = ({ repos, pageLimit }) => {
