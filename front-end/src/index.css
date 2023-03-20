@@ -39,3 +39,7 @@ a {
   color: inherit !important;
   text-decoration: none !important;
 }
+
+.pagination {
+  margin-bottom: 2rem;
+}

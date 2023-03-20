@@ -42,7 +42,7 @@ export const HomePage = () => {
         placeholder='Search username'
         onChangeHandler={onSearchChange}
       />
-      <UserCardList users={filteredUsers} />
+      <UserCardList users={filteredUsers} pageLimit={10} />
     </MainLayout>
   )
 }

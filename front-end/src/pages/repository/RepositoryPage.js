@@ -44,7 +44,7 @@ export const RepositoryPage = () => {
         placeholder='Search repository name'
         onChangeHandler={onSearchChange}
       />
-      <RepositoryCardList repos={filteredRepos} />
+      <RepositoryCardList repos={filteredRepos} pageLimit={8} />
     </MainLayout>
   );
 }
